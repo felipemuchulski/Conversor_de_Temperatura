@@ -27,17 +27,17 @@
 
 function tranformDegree(degree) {
    const celsiusExist = degree.toUpperCase().includes('C');
-   const fahreinheitExist = degree.toUpperCase().includes('F');
+   const fahrenheitExist = degree.toUpperCase().includes('F');
    const kelvinExist = degree.toUpperCase().includes('K')
 
-   if (!celsiusExist && !fahreinheitExist && !kelvinExist) {
+   if (!celsiusExist && !fahrenheitExist && !kelvinExist) {
       throw new Error('Grau não identificado');
    }
 
    //Fahrenheit para Celsius e Fahrenheit para Kelvin
    let updatedDgree = Number(degree.toUpperCase().replace("F", ""));
-   let formulaA = (fahreinheit) => (fahreinheit - 32) * 5 / 9; //celsius
-   let formulaB = (fahreinheit) => (fahreinheit - 32) * 5 / 9 + 273 //fahrenheit
+   let formulaA = (fahrenheit) => (fahrenheit - 32) * 5 / 9; //celsius
+   let formulaB = (fahrenheit) => (fahrenheit - 32) * 5 / 9 + 273 //fahrenheit
    let degreeSing = ['C', 'K'];
 
 
